@@ -1,4 +1,15 @@
 @charset "UTF-8";
+
+@font-face {
+  font-family: "yansong";
+  src: url("static/font/yansong.ttf");
+}
+
+@font-face {
+  font-family: "ubuntu-mono";
+  src: url("static/font/ubuntu-mono.ttf");
+}
+
 /*basic styles starts*/
 html {
   background-color: #f7f7f7;
@@ -23,7 +34,9 @@ html::-webkit-scrollbar-thumb {
 
 body {
   color: #333333;
-  font-family: "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* font-family: "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+  font-family: "yansong", serif, "ubuntu mono", monospace;
   font-size: 16px;
   width: 100%;
   background-color: #f7f7f7;
@@ -41,14 +54,16 @@ a {
   text-decoration: none;
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
   opacity: 1;
   -webkit-transition: all 0.15s linear;
   transition: all 0.15s linear;
   color: #424242;
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
   color: #555555;
 }
 
@@ -69,7 +84,7 @@ hr {
 .main {
   background: #ffffff;
   -webkit-box-shadow: 0 10px 20px 0 rgba(236, 236, 236, 0.86);
-          box-shadow: 0 10px 20px 0 rgba(236, 236, 236, 0.86);
+  box-shadow: 0 10px 20px 0 rgba(236, 236, 236, 0.86);
   width: 800px;
   margin: 60px auto 0;
 }
@@ -152,7 +167,7 @@ hr {
 }
 
 .header .site_title_container .site_title a {
-  font-size: 28px;
+  font-size: 32px;
   width: 65px;
   letter-spacing: 2px;
   line-height: 1.2;
@@ -161,6 +176,9 @@ hr {
 
 .header .site_title_container .site_title a span {
   display: block;
+  font-family: "yansong", serif;
+  width: 80px;
+  height: 80px;
 }
 
 .header .site_title_container .site_title a:hover {
@@ -177,6 +195,7 @@ hr {
   font-weight: normal !important;
   float: none !important;
   text-align: right;
+  font-family: "yansong", serif;
 }
 
 .header .my_socials {
@@ -368,8 +387,9 @@ hr {
   padding-top: 25px;
   padding-bottom: 10px;
   color: #000000;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 1px;
+  font-family: "yansong", serif;
 }
 
 /*for archive*/
@@ -482,7 +502,7 @@ hr {
 
 .markdown pre,
 .markdown code {
-  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: "ubuntu mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 0.9em;
   background: #f8fafc;
   border: none;
@@ -540,17 +560,18 @@ hr {
 }
 
 .markdown blockquote {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  /* -webkit-box-sizing: border-box; */
+  box-sizing: border-box;
   margin: 2.5em 0;
-  padding: 0 0 0 50px;
+  padding: 0 0 0 10px;
   font-style: italic;
   color: #555555;
-  border-left: none;
+  /* border-left: none; */
+  border-left: 4px solid #dfe2e5;
 }
 
 .markdown blockquote:before {
-  content: '“';
+  content: "";
   display: block;
   font-family: times, sans-serif;
   font-style: normal;
@@ -588,7 +609,8 @@ table th {
   background-color: #f6f8fa;
 }
 
-table th, table td {
+table th,
+table td {
   padding: 10px 20px;
   border: 1px solid #dfe2e5;
 }
@@ -606,7 +628,7 @@ a.back_to_top {
   font-size: 18px;
   text-align: center;
   -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  transition-duration: 0.5s;
   -webkit-transition-property: background-color;
   transition-property: background-color;
   display: none;
@@ -639,7 +661,7 @@ a.back_to_top:hover span {
     width: 100%;
     background-color: #ffffff;
     -webkit-box-shadow: 0 10px 20px 0 rgba(236, 236, 236, 0.86);
-            box-shadow: 0 10px 20px 0 rgba(236, 236, 236, 0.86);
+    box-shadow: 0 10px 20px 0 rgba(236, 236, 236, 0.86);
   }
   .nav_container .site_nav ul {
     float: none;
@@ -716,12 +738,12 @@ a.back_to_top:hover span {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-3px);
-            transform: translateY(-3px);
+    transform: translateY(-3px);
   }
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
