@@ -2,12 +2,7 @@
 
 @font-face {
   font-family: "yansong";
-  src: url("static/font/yansong.ttf");
-}
-
-@font-face {
-  font-family: "ubuntu-mono";
-  src: url("static/font/ubuntu-mono.ttf");
+  src: url("/static/font/yansong.ttf");
 }
 
 /*basic styles starts*/
@@ -36,7 +31,7 @@ body {
   color: #333333;
   /* font-family: "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
-  font-family: "yansong", serif, "ubuntu mono", monospace;
+  font-family: "yansong", serif;
   font-size: 16px;
   width: 100%;
   background-color: #f7f7f7;
